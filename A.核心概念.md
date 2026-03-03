@@ -143,7 +143,7 @@ $ cut -f1 grades | sort | uniq -c | sort -nr | head -n1 | cut -c9
 
 ```bash
 # 目录 detecting_duplicate_files 内的文件是否有重复文件？
-# 计算文件校验和，使用 cut 截取每一行的前 32 个字符，通过 sort 将重复的行防盗相邻的位置上
+# 计算文件校验和，使用 cut 截取每一行的前 32 个字符，通过 sort 将重复的行放到相邻的位置上
 $ md5sum *.jpg | cut -c1-32 | sort
 # 通过 uniq 统计重复数据
 $ md5sum *.jpg | cut -c1-32 | sort | uniq -c 
